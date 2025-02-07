@@ -9,8 +9,9 @@ const Navbar = () => {
               <div className="container mx-auto flex justify-center items-center">
                   <div className="flex items-center h-16 justify-between">
                   <Link href='/' className='text-white'>Shop Smart</Link>
-                  <Link href='/products' className='text-white'>Store</Link>
                   <Link href='/login' className='text-white'>Sign in</Link>
+                  <Link href='/register' className='text-white'>Sign up</Link>
+                  <Link href='/cart' className='text-white'>Cart</Link>
                   </div>
               </div>
           </div>

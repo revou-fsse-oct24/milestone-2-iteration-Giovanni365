@@ -1,4 +1,5 @@
 import { GetServerSideProps } from 'next';
+import { useEffect, useState } from 'react';
 
 interface Product {
     id: number;
@@ -19,6 +20,13 @@ interface ProductDetailProps {
 }
 
 const ProductDetail = ({ product, error }: ProductDetailProps) => {
+  console.log(product)
+
+  const [productData, setProductData] = useState(product || null)
+
+  
+
+
   if (error) {
     return <div className="text-red-500 text-center">{error}</div>;
   }
