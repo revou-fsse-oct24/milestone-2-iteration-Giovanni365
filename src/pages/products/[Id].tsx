@@ -1,5 +1,5 @@
 import { GetServerSideProps } from 'next';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 interface Product {
     id: number;
@@ -24,9 +24,6 @@ const ProductDetail = ({ product, error }: ProductDetailProps) => {
 
   const [productData, setProductData] = useState(product || null)
 
-  
-
-
   if (error) {
     return <div className="text-red-500 text-center">{error}</div>;
   }
@@ -34,6 +31,9 @@ const ProductDetail = ({ product, error }: ProductDetailProps) => {
   if (!product) {
     return <div className="text-center">Product not found.</div>;
   }
+
+  console.log("Fetched Product:", product);
+
 
   return (
     <div className="container mx-auto px-4 py-8">
